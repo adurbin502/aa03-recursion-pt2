@@ -11,10 +11,18 @@ addToTwelve([1, 11, 4, 7, 6]); // true
 addToTwelve([1, 12, 4, 7, 6]); // false
 addToTwelve([1]); // false
 ***********************************************************************/
-
+//should return true if there are two adjacent numbers in the array that sum to 12
+//use slice
 
 function addToTwelve(arr) {
-  // Your code here 
+  if (arr.length < 2) {
+    return false
+  }
+  // if (arr[0] + arr[1] === 12) {
+  //   return true
+  // }
+  // return addToTwelve(arr.slice(1))
+  return (arr[0] + arr[1] === 12 || addToTwelve(arr.slice(1)))
 }
 
 

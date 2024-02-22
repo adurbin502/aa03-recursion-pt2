@@ -39,10 +39,20 @@ be recursively calling `advancedExponent`. Find a way to visually see how many
 times `advancedExponent` is being recursively called.
 ***********************************************************************/
 
-
+//should return the base number to the n power"
+//should not throw a maximum call stack error for high powers
 function advancedExponent(b, n) {
-  // Your code here 
+  if (power === 0) {
+    return 1
 }
+if(power > 0) {
+    return num * exponent(num, power -1)
+}
+else { return 1 / (num * exponent(num, (-power -1)))
+    //returns raised to the power
+    }
+}
+
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
