@@ -42,13 +42,13 @@ times `advancedExponent` is being recursively called.
 //should return the base number to the n power"
 //should not throw a maximum call stack error for high powers
 function advancedExponent(b, n) {
-  if (power === 0) {
+  if (n === 0) {
     return 1
 }
-if(power > 0) {
-    return num * exponent(num, power -1)
+if(n > 0) {
+    return b * exponent(b, n /2)
 }
-else { return 1 / (num * exponent(num, (-power -1)))
+else { return 1 / (b * exponent(b, (n -1 / 2)))
     //returns raised to the power
     }
 }
